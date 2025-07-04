@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+import { aboutData } from '../data/aboutData.js';
+import ProfilePicture from '../components/about/ProfilePicture.jsx';
+import Navigation from '../components/about/Navigation.jsx';
+import AnimatedAboutContent from '../components/about/AnimatedAboutContent.jsx';
+import VerticalLine from '../components/about/VerticalLine.jsx';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Sanyat's Portfolio</title>
+    <meta name="description" content="Get to know Sanyat - a passionate developer, creative thinker, and lifelong learner exploring the intersection of technology and storytelling." />
+  </head>
+
+  <body>
+    <main class="min-h-screen bg-black text-white font-mono relative overflow-hidden">
+
+      <!-- Navigation -->
+      <Navigation client:load />
+
+      <!-- Profile Picture Component -->
+      <ProfilePicture client:load />
+
+      <!-- Vertical Line with Drop Animation -->
+      <VerticalLine client:load />
+
+      <!-- Main Content Wrapper -->
+      <div class="relative z-10 pt-[30vh] lg:pt-[30vh] max-lg:pt-[50vw] pb-20">
+
+        <!-- Static Container - Positioned to avoid image overlap -->
+        <div class="max-w-none pl-[25vw] pr-8 lg:pl-[30vw] lg:pr-16 max-lg:pl-8">
+          <AnimatedAboutContent client:load aboutData={aboutData} />
+        </div>
+      </div>
+
+    </main>
+
+    <!-- CSS Styles for Iuri's template aesthetic -->
+    <style>
+      :root {
+        --purple: #a855f7;
+        --gray: #6b7280;
+        --bg: #000000;
+        --light: #f3f4f6;
+        --comment: #9ca3af;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--light);
+        font-family: 'Courier New', monospace;
+      }
+
+      .text-primary-400 {
+        color: var(--purple);
+      }
+
+      .text-primary-500 {
+        color: var(--purple);
+      }
+
+      .bg-primary-500 {
+        background-color: var(--purple);
+      }
+
+      .border-primary-500 {
+        border-color: var(--purple);
+      }
+    </style>
+  </body>
+</html>

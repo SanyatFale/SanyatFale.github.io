@@ -1,0 +1,29 @@
+---
+import { getCollection, getEntryBySlug } from 'astro:content';
+import { AstroError } from 'astro/errors';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.props;
+const post = await getEntryBySlug('blog', slug);
+if (!post) throw new AstroError(`Post not found: ${slug}`);
+const { Content } = await post.render();
+---
+
+<BlogLayout
+  title={post.data.title}
+  pubDate={post.data.pubDate}
+  description={post.data.description}
+  tags={post.data.tags}
+  thumbnail={post.data.thumbnail}
+  readingTime={post.data.readingTime}
+>
+  <Content />
+</BlogLayout>
