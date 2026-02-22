@@ -3,9 +3,9 @@ export const aboutData = {
   name: "sanyat",
   title: "about",
   description: [
-    "I'm a passionate developer who loves creating digital experiences that blend functionality with creativity.",
-    "My journey in technology started with curiosity and has evolved into a deep appreciation for clean code, user experience, and innovative solutions.",
-    "I believe in the power of technology to solve real-world problems and create meaningful connections."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    "Nullam laoreet nec turpis sit amet dictum.",
+    "Sed volutpat, velit eu ultrices tincidunt, nibh velit ultrices nisl, eu ultrices nisl velit eu ultrices."
   ],
   subtitles: [
     "passionate about clean code",
@@ -15,19 +15,19 @@ export const aboutData = {
   links: [
     {
       label: "GitHub",
-      url: "https://github.com/sanyat-dev",
+      url: "https://github.com/SanyatFale",
       title: "View my code on GitHub",
       icon: "github"
     },
     {
       label: "LinkedIn", 
-      url: "https://linkedin.com/in/sanyat-dev",
+      url: "https://linkedin.com/in/sanyatfale",
       title: "Connect with me on LinkedIn",
       icon: "linkedin"
     },
     {
       label: "Email",
-      url: "mailto:hello@sanyat.dev",
+      url: "mailto:sanyatfale@gmail.com",
       title: "Send me an email",
       icon: "email"
     }
@@ -47,22 +47,22 @@ export const aboutData = {
   ],
   experiences: [
     {
-      position: "Full Stack Developer",
+      position: "MLE",
       company: "Tech Startup",
-      time: "2022 - Present",
-      description: "Building scalable web applications with modern technologies"
+      time: "2026 - Present",
+      description: "code migration"
     },
     {
-      position: "Frontend Developer", 
-      company: "Digital Agency",
-      time: "2021 - 2022",
-      description: "Created responsive websites and interactive user interfaces"
+      position: "JuniorDeveloper", 
+      company: "Striim",
+      time: "2025 - 2026",
+      description: "PII detection"
     },
     {
-      position: "Junior Developer",
-      company: "Software Company", 
-      time: "2020 - 2021",
-      description: "Learned the fundamentals of web development and best practices"
+      position: "Research Undergraduate",
+      company: "Undergraduate", 
+      time: "2025 - 2026",
+      description: "Research in machine learning"
     }
   ],
   languages: {
@@ -80,7 +80,7 @@ export const aboutData = {
     "Writing technical blog posts",
     "Learning new frameworks and tools",
     "Building side projects",
-    "Mentoring junior developers",
-    "Reading tech books and articles"
+    "Playing video games",
+    "Reading books and articles"
   ]
 };
