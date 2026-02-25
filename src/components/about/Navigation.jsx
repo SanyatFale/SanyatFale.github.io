@@ -9,14 +9,14 @@ const Navigation = () => {
           className="text-gray-300 hover:text-primary-400 transition-colors duration-300 font-mono text-xs sm:text-sm"
           title="Projects"
         >
-          .projects()
+          ./builds
         </a>
         <a
           href="/blog"
           className="text-gray-300 hover:text-primary-400 transition-colors duration-300 font-mono text-xs sm:text-sm"
           title="Blog"
         >
-          .blog()
+          ./checkpoints
         </a>
         <span className="text-primary-400 opacity-50 font-mono text-xs sm:text-sm cursor-default hidden sm:inline">
           .about()
