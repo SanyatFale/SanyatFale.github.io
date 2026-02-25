@@ -11,12 +11,11 @@ const ProfilePicture = () => {
   return (
     <div
       className={`
+        hidden lg:block
         fixed pointer-events-none z-0 transition-all duration-1000 ease-out
         ${isVisible ? 'opacity-100' : 'opacity-0'}
 
         top-1/2 -left-12 -translate-y-1/2 w-[40vw] aspect-square
-        lg:top-1/2 lg:-left-12 lg:-translate-y-1/2 lg:translate-x-0 lg:w-[40vw]
-        max-lg:top-0 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:translate-y-0 max-lg:w-[60vw]
       `}
     >
       {/* Photo — full colour, no filters */}

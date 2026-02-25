@@ -28,10 +28,10 @@ import VerticalLine from '../components/about/VerticalLine.jsx';
       <VerticalLine client:load />
 
       <!-- Main Content Wrapper -->
-      <!-- Desktop: content starts past the photo; Mobile: content below the photo -->
-      <div class="relative z-10 pt-[28vh] lg:pt-[28vh] max-lg:pt-[56vw] pb-20">
+      <!-- Desktop: content starts past the photo; Mobile: full-width with normal padding -->
+      <div class="relative z-10 pt-[28vh] max-lg:pt-20 pb-20">
 
-        <div class="max-w-none pl-[28vw] pr-6 lg:pl-[32vw] lg:pr-16 max-lg:pl-5 max-lg:pr-5">
+        <div class="max-w-none pl-[32vw] pr-16 max-lg:pl-6 max-lg:pr-6">
           <AnimatedAboutContent client:load aboutData={aboutData} />
         </div>
       </div>

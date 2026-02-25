@@ -14,7 +14,16 @@ export default function VinylAudioPlayer({
   const [isHovered, setIsHovered] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [mobileHidden, setMobileHidden] = useState(false);
   const audioRef = useRef(null);
+
+  // On mobile screens, fade out after 3 seconds
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      const timer = setTimeout(() => setMobileHidden(true), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -164,7 +173,7 @@ export default function VinylAudioPlayer({
       
       {/* Vinyl Record Player */}
       <div
-        className="fixed top-20 right-6 z-40"
+        className={`fixed top-20 right-6 z-40 transition-opacity duration-700 ${mobileHidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
