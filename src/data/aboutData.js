@@ -1,16 +1,14 @@
-// About page data structure inspired by Iuri's template
 export const aboutData = {
   name: "sanyat",
   title: "about",
   description: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    "Nullam laoreet nec turpis sit amet dictum.",
-    "Sed volutpat, velit eu ultrices tincidunt, nibh velit ultrices nisl, eu ultrices nisl velit eu ultrices."
+    "B.Tech student in Mathematics and Computing at the Indian Institute of Science, Bengaluru.",
+    "I work on machine learning systems, NLP, and agentic AI — particularly problems at the intersection of large language models and real-world deployment.",
+    "Currently interning at Latentforce, building LLM-powered software migration pipelines."
   ],
   subtitles: [
-    "passionate about clean code",
-    "focused on user experience", 
-    "always learning new technologies"
+    "MLE Intern @ Latentforce",
+    "IISc Bengaluru, 2022 – present"
   ],
   links: [
     {
@@ -20,67 +18,39 @@ export const aboutData = {
       icon: "github"
     },
     {
-      label: "LinkedIn", 
+      label: "LinkedIn",
       url: "https://linkedin.com/in/sanyatfale",
-      title: "Connect with me on LinkedIn",
+      title: "Connect on LinkedIn",
       icon: "linkedin"
     },
     {
       label: "Email",
-      url: "mailto:sanyatfale@gmail.com",
+      url: "#",
+      encoded: "c2FueWF0dmlub2RAaWlzYy5hYy5pbg==",
       title: "Send me an email",
       icon: "email"
     }
   ],
   cv: {
-    file: "resume.pdf",
-    label: "Resume",
-    title: "Download my resume"
+    file: "cv/sanyat-cv.pdf",
+    label: "CV",
+    title: "Download my CV"
   },
-  skills: [
-    ["JavaScript", "TypeScript", "Python"],
-    ["React", "Vue", "Astro", "Next.js"],
-    ["Node.js", "Express", "FastAPI"],
-    ["PostgreSQL", "MongoDB", "Redis"],
-    ["Docker", "AWS", "Vercel"],
-    ["Git", "Linux", "VS Code"]
-  ],
+  skills: [],
   experiences: [
     {
-      position: "MLE",
-      company: "Tech Startup",
-      time: "2026 - Present",
-      description: "code migration"
+      position: "MLE Intern",
+      company: "Latentforce",
+      time: "Jan 2026 – present",
+      description: "LLM-powered dependency analyzers and polyglot contract analyzers for software migration"
     },
     {
-      position: "JuniorDeveloper", 
+      position: "Junior Software Developer",
       company: "Striim",
-      time: "2025 - 2026",
-      description: "PII detection"
-    },
-    {
-      position: "Research Undergraduate",
-      company: "Undergraduate", 
-      time: "2025 - 2026",
-      description: "Research in machine learning"
+      time: "May – Aug 2025",
+      description: "Enhanced PII detection: avg precision 0.850 → 0.997, F1 0.985 across 21 categories. Built Java recognizer library reducing analysis time by 97%"
     }
   ],
-  languages: {
-    "fluent": [
-      ["en", "English"],
-      ["hi", "Hindi"]
-    ],
-    "conversational": [
-      ["es", "Spanish"],
-      ["fr", "French"]
-    ]
-  },
-  busy: [
-    "Contributing to open source projects",
-    "Writing technical blog posts",
-    "Learning new frameworks and tools",
-    "Building side projects",
-    "Playing video games",
-    "Reading books and articles"
-  ]
+  languages: {},
+  busy: []
 };

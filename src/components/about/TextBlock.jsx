@@ -17,10 +17,10 @@ const TextBlock = ({ data, shouldAnimate = false }) => {
       std max-w-2xl font-mono text-lg leading-relaxed text-gray-300 transition-all duration-1000 ease-out
       ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}
     `}>
-      
+
       {/* First Fold - Contact and Description */}
       <div className="mb-12">
-        
+
         {/* Contact Links */}
         <ContactLinks links={data.links} cv={data.cv} />
 
@@ -47,6 +47,22 @@ const TextBlock = ({ data, shouldAnimate = false }) => {
               </CommentText>
             </div>
           )}
+        </div>
+
+        {/* Quick navigation to other sections */}
+        <div className="mt-8 flex gap-8 text-sm">
+          <a
+            href="/projects"
+            className="font-mono text-gray-500 hover:text-primary-400 transition-colors duration-300"
+          >
+            → .projects()
+          </a>
+          <a
+            href="/blog"
+            className="font-mono text-gray-500 hover:text-primary-400 transition-colors duration-300"
+          >
+            → .blog()
+          </a>
         </div>
       </div>
     </div>

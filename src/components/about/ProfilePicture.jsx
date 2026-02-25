@@ -4,7 +4,6 @@ const ProfilePicture = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animation after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
@@ -12,30 +11,31 @@ const ProfilePicture = () => {
   return (
     <div
       className={`
-        pic fixed pointer-events-none z-50 transition-all duration-1000 ease-out
+        fixed pointer-events-none z-0 transition-all duration-1000 ease-out
         ${isVisible ? 'opacity-100' : 'opacity-0'}
 
-        /* Desktop positioning - left side */
-        top-1/2 -left-12 -translate-y-1/2 w-[43vw] aspect-square
-
-        /* Mobile positioning - top center */
-        lg:top-1/2 lg:-left-12 lg:-translate-y-1/2 lg:translate-x-0 lg:rotate-0 lg:w-[43vw]
-        max-lg:-top-12 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:translate-y-0 max-lg:rotate-90 max-lg:w-[70vw]
+        top-1/2 -left-12 -translate-y-1/2 w-[40vw] aspect-square
+        lg:top-1/2 lg:-left-12 lg:-translate-y-1/2 lg:translate-x-0 lg:w-[40vw]
+        max-lg:top-0 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:translate-y-0 max-lg:w-[60vw]
       `}
-      style={{
-        filter: 'grayscale(1) brightness(1)',
-        mixBlendMode: 'difference'
-      }}
     >
+      {/* Photo — full colour, no filters */}
       <div
-        className="w-full h-full rounded-full bg-cover bg-center bg-no-repeat transition-transform duration-500 hover:scale-105"
+        className="w-full h-full rounded-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/images/your-photo.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat'
         }}
-        alt="Sanyat's profile picture"
+      />
+
+      {/* Fade right edge to black so overlapping text stays readable */}
+      <div
+        className="absolute inset-0 rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 30% 50%, transparent 45%, rgba(0,0,0,0.65) 68%, rgba(0,0,0,0.92) 85%)'
+        }}
       />
     </div>
   );
